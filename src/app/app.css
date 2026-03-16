@@ -1,0 +1,99 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.status-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.status-table thead tr {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.status-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-table td {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Row colors based on status */
+tr.status-yet-to-start {
+  background-color: #fef9e7;
+  color: #7d6608;
+}
+
+tr.status-in-progress {
+  background-color: #ebf5fb;
+  color: #1a5276;
+}
+
+tr.status-done {
+  background-color: #eafaf1;
+  color: #1e8449;
+}
+
+tr.status-failed {
+  background-color: #fdedec;
+  color: #922b21;
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.status-badge.status-yet-to-start {
+  background-color: #f9e79f;
+  color: #7d6608;
+}
+
+.status-badge.status-in-progress {
+  background-color: #85c1e9;
+  color: #1a5276;
+}
+
+.status-badge.status-done {
+  background-color: #82e0aa;
+  color: #1e8449;
+}
+
+.status-badge.status-failed {
+  background-color: #f1948a;
+  color: #922b21;
+}
+
+/* Hover effect */
+.status-table tbody tr:hover {
+  filter: brightness(0.97);
+  transition: filter 0.2s ease;
+}

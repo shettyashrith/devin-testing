@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Participant Asset Generation Status</h1>
+
+  <table class="status-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Participant Name</th>
+        <th>Asset Generation</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let participant of participants; let i = index"
+          [ngClass]="getStatusClass(participant.status)">
+        <td>{{ i + 1 }}</td>
+        <td>{{ participant.name }}</td>
+        <td>{{ participant.assetGeneration }}</td>
+        <td>
+          <span class="status-badge" [ngClass]="getStatusClass(participant.status)">
+            {{ participant.status }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
